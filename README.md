@@ -1,6 +1,5 @@
-# Multidimensional Stability and Transverse Bifurcation of Hydraulic Shocks and Roll Waves in Open Channel Flow
+# Multidimensional Stability and Transverse Bifurcation of Hydraulic Shocks and Roll Waves in Open Channel Flow: Supplementary files
 
- Supplementary codes for Evans function solvers and time-simulation of hydraulic shocks and roll waves of the inviscid Saint-Venant equations. 
 
 _Authors:_ Zhao Yang and Kevin Zumbrun 
 
