@@ -21,10 +21,6 @@ For questions/comments please contact either the first author via yangzhao@amss.
 
 ## Description 
 
-### movies
-
-Inside the folder movies, one can find sample numerical time-evolutions with perturbed dam-break initial data in the sub-folder hydraulic shocks and perturb roll waves initial data in the sub-folder roll waves, respectively.
-
 ### Evans solvers
 
 Inside the folder Evans solvers, one can find codes for Evans/Evans-Lopatinsky solvers in the sub-folder hydraulic shocks and a periodic Evans-Lopatinsky solver in the sub-folder roll waves, respectively.
