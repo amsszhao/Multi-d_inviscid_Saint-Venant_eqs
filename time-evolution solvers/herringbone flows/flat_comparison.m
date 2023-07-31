@@ -6,7 +6,7 @@ filepath3=strcat(pwd,'/flat_F_equals_2_point_15');
 
 N=5000;
 mov(1:N)= struct('cdata',[],'colormap',[]);
-filenamev='flat_comparision';
+filenamev='flat_comparison';
 X_lower=0.005;
 X_upper=49.995;
 dx=0.01;
