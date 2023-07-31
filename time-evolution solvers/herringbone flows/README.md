@@ -14,8 +14,11 @@ flat initial data with co-moving speed set to be that of discontinuous hydraulic
 
 #### dam_break_F_equals_2_point_13.py, dam_break_F_equals_2_point_14.py, dam_break_F_equals_2_point_15.py -> dam_break_comparison.m
 
+Comparison of dam-break simulations with Froude number 2.13,2.14,2.15.
 
 #### flat_F_equals_2_point_13.py, flat_F_equals_2_point_14.py, flat_F_equals_2_point_15.py -> flat_comparison.m
+
+Comparison of flat simulations with Froude number 2.13,2.14,2.15.
 
 
 
