@@ -18,16 +18,15 @@ For questions/comments please contact either the first author via yangzhao@amss.
 
 * clawpack https://www.clawpack.org/
 
-
 ## Description 
 
 ### Evans solvers
 
-Inside the folder Evans solvers, one can find codes for Evans/Evans-Lopatinsky solvers in the sub-folder hydraulic shocks and a periodic Evans-Lopatinsky solver in the sub-folder roll waves, respectively.
+Inside the folder Evans solvers and its subfolders, one can find codes for Evans/Evans-Lopatinsky solvers for smooth hydraulic shocks and discontinuous hydraulic shocks and a periodic Evans-Lopatinsky solver for roll waves, respectively.
 
 ### time-evolution solvers
 
-Inside the folder time-evolution solvers, one can find sample python codes for generating time-evolutions of the 2d inviscid Saint-Venant equations with either dam-break or roll waves initial data. One can also find matlab codes that make use of the raw data files to create movies.
+Inside the folder time-evolution solvers and its subfolders, one can find sample python codes for generating time-evolutions of the 2d inviscid Saint-Venant equations with either dam-break or roll waves initial data. One can also find matlab codes that make use of the raw data files to create movies.
 
 ### data
 
