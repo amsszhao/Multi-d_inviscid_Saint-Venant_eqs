@@ -8,6 +8,40 @@ In general, one should first run the python file XXX.py to generate raw data fil
 With wall boundary condition, the width of the channel is set to be 0.15. No flapping front is shown at the end. 
 
 
+### roll_width_point16.py -> roll_width_point16.m
+
+With wall boundary condition, the width of the channel is set to be 0.16. No flapping front is shown at the end. 
+
+
+### roll_width_point17.py -> roll_width_point17.m
+
+With wall boundary condition, the width of the channel is set to be 0.17. No flapping front is shown at the end. 
+
+### roll_width_point18.py -> roll_width_point18.m
+
+With wall boundary condition, the width of the channel is set to be 0.18. Roll wave fronts flap at the end.
+
+### roll_width_point18_refined.py -> roll_width_point18_refined.m
+
+With wall boundary condition, the width of the channel is set to be 0.18. Roll wave fronts flap at the end. Finer meshgrid is used compared with roll_width_point18.py. Raw data is used to generated figure in the paper.
+
+### roll_width_point18_periodic.py -> roll_width_point18_periodic.m
+
+With periodic y-boundary condition, the width of the channel is set to be 0.18. No flapping front is shown at the end. 
+
+### roll_width_point2.py -> roll_width_point2.m
+
+With wall boundary condition, the width of the channel is set to be 0.2. Roll wave fronts flap and gradually become chaotic in the end.
+
+
+### roll_width_point36_periodic.py -> roll_width_point36_periodic.m
+
+With periodic y-boundary condition, the width of the channel is set to be 0.36. Roll wave fronts flap at the end.
+
+### roll_width_1.py -> roll_width_1.m
+
+With wall boundary condition, the width of the channel is set to be 1. Roll wave fronts flap and gradually become chaotic in the end.
+
 
 
 
