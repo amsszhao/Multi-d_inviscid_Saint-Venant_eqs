@@ -2,6 +2,8 @@
 
 One should first run python files to generate raw date files and then run matlab files to generate movies.
 
+Movies are downloadable from https://doi.org/10.5281/zenodo.8199967
+
 #### dam_break_F_equals_2_point_25.py -> dam_break_F_equals_2_point_25.m
 
 Dam break initial data with left fluid height 1, right fluid height 0.7, and Froude number 2.25. The discontinuous hydraulic shock is 2d convectively unstable. Herringbone flows are shown at the end. 
