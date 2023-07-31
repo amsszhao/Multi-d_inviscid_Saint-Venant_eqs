@@ -16,8 +16,9 @@ For questions/comments please contact either the first author via yangzhao@amss.
 
 ### Python libraries
 
-* clawpack https://www.clawpack.org/
-
+* clawpack
+  Clawpack Development Team (YEAR), Clawpack Version 5.9.0, http://www.clawpack.org, doi: 10.5281/zenodo.7026045
+  
 ## Description 
 
 ### Evans solvers
