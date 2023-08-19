@@ -27,8 +27,11 @@ dy=0.01;
 [m,n]=size(X);
 
 dt=0.2;
-f=figure;
 for i=1:N
+    if i==1
+       f=figure;
+       f.Color='black';
+    end
     if i-1<=9
         format='fort.q000%d';
     else if i-1<=99
@@ -83,7 +86,7 @@ for i=1:N
     ax.CameraTarget = [(X_lower+X_upper)/2 0.5 3];
     ax.CameraUpVector = [0 0 1];
     ax.CameraViewAngle = 35;
-    ax.DataAspectRatio = [0.3 0.4 1];
+    ax.DataAspectRatio = [0.2 0.4 1];
     l1 = light;
     theta=40/180*pi;
     alpha=5/180*pi;
@@ -99,23 +102,29 @@ for i=1:N
     s.SpecularStrength = 1;
     s.SpecularColorReflectance = 1;
     s.SpecularExponent = 7;
-    
     t = annotation('textbox','String','$F=6$, $H_-=0.28$ width is $1$','Interpreter','latex','EdgeColor','none');
     t.FontSize=20;
-    t.Position=[0.3,0.85,0.4,0.12];
+    t.Position=[0.4,0.85,0.225,0.07];
+    t.Color=[1 1 1];
     axis off
-
     ax2=subplot(2,1,2);
     plot(shock(:,1),shock(:,2),'.')
     xlim([X_lower X_upper])
     ylim([0 1])
-    t=xlabel('x','Interpreter','latex');
+    t=xlabel('$x$','Interpreter','latex');
     t.FontSize=20;
-    t=ylabel('y','Interpreter','latex');
-    t.FontSize=15;
-    formatt='t=%.1f';
+    t=ylabel('$y$','Interpreter','latex');
+    t.FontSize=20;
+    formatt='$t=%.1f$';
     t=title(sprintf(formatt,(i-1)*dt),'Interpreter','latex');
     t.FontSize=20;
+    t.Color=[1 1 1];
+    ax2.YTick=[0 0.5 1];
+    ax2.XColor=[1 1 1];
+    ax2.YColor=[1 1 1];
+    ax2.ZColor=[1 1 1];
+    ax2.FontSize=20;
+    ax2.TickLabelInterpreter='latex';
     mov(i)=getframe(f);
     clf(f)
 end

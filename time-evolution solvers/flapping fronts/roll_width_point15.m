@@ -1,6 +1,6 @@
 clc
 clear
-filepath=strcat(pwd,'/roll_width_point15');
+filepath=strcat(pwd,'\roll_width_point15');
 N=5000;
 mov(1:N)= struct('cdata',[],'colormap',[]);
 filenamev='roll_width_point15';
@@ -24,8 +24,11 @@ dy=(Y_upper/99);
 [m,n]=size(X);
 
 dt=0.2;
-f=figure;
 for i=1:N
+    if i==1
+       f=figure;
+       f.Color='black';
+    end
     if i-1<=9
         format='fort.q000%d';
     else if i-1<=99
@@ -99,19 +102,27 @@ for i=1:N
     s.SpecularExponent = 7;
     t = annotation('textbox','String','$F=6$, $H_-=0.28$ width is $0.15$','Interpreter','latex','EdgeColor','none');
     t.FontSize=20;
-    t.Position=[0.43,0.85,0.4,0.12];
+    t.Position=[0.4,0.85,0.225,0.07];
+    t.Color=[1 1 1];
     axis off
     ax2=subplot(2,1,2);
     plot(shock(:,1),shock(:,2),'.')
     xlim([X_lower X_upper])
     ylim([0 0.15])
-    t=xlabel('x','Interpreter','latex');
+    t=xlabel('$x$','Interpreter','latex');
     t.FontSize=20;
-    t=ylabel('y','Interpreter','latex');
-    t.FontSize=15;
-    formatt='t=%.1f';
+    t=ylabel('$y$','Interpreter','latex');
+    t.FontSize=20;
+    formatt='$t=%.1f$';
     t=title(sprintf(formatt,(i-1)*dt),'Interpreter','latex');
     t.FontSize=20;
+    t.Color=[1 1 1];
+    ax2.YTick=[0 0.075 0.15];
+    ax2.XColor=[1 1 1];
+    ax2.YColor=[1 1 1];
+    ax2.ZColor=[1 1 1];
+    ax2.FontSize=20;
+    ax2.TickLabelInterpreter='latex';
     mov(i)=getframe(f);
     clf(f)
 end
