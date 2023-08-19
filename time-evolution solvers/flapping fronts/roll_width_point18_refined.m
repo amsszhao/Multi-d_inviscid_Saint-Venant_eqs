@@ -1,6 +1,6 @@
 clc
 clear
-filepath=strcat(pwd,'/roll_width_point18_refined');
+filepath=strcat(pwd,'\roll_width_point18_refined');
 N=4000;
 mov(1:N)= struct('cdata',[],'colormap',[]);
 filenamev='roll_width_point18_refined';
@@ -22,18 +22,21 @@ dy=(Y_upper/99);
 [m,n]=size(X);
 
 dt=0.1;
-f=figure;
 for i=1:N
+    if i==1
+        f=figure;
+        f.Color='black';
+    end
     if i-1<=9
         format='fort.q000%d';
     else if i-1<=99
             format='fort.q00%d';
-        else if i-1<=999
-                format='fort.q0%d';
-            else
-                format='fort.q%d';
-            end
-        end
+    else if i-1<=999
+            format='fort.q0%d';
+    else
+        format='fort.q%d';
+    end
+    end
     end
     filename=fullfile(filepath,sprintf(format,i-1));
     fileID=fopen(filename);
@@ -50,7 +53,7 @@ for i=1:N
         flag=1;
         sum_dh=[];
         shock_index=0;
-        for j=2:7999
+        for j=2:23999
             if dh(j)>=0
                 flag=1;
                 sum_dh(end+1)=dh(j);
@@ -67,38 +70,55 @@ for i=1:N
             end
         end
     end
-    ax=axes;
+    ax=subplot(2,1,1);
     s=surf(X,Y,H);
     s.EdgeColor='none';
     view(3)
     ax.XLim = [X_lower X_upper];
-    ax.YLim = [0 1];
-    ax.CameraPosition =[(X_lower+X_upper)/2 -0.1 5];
-    ax.CameraTarget = [(X_lower+X_upper)/2 0.1 1.5];
+    ax.YLim = [0 0.18];
+    %    axis off
+    ax.CameraPosition =[0.9 0 3];
+    ax.CameraTarget = [0.9 0.1 1];
     ax.CameraUpVector = [0 0 1];
-    ax.CameraViewAngle = 35;
-    ax.DataAspectRatio = [0.4 0.4 1];
+    ax.CameraViewAngle =15;
+    ax.DataAspectRatio =[0.3 1 1];
     l1 = light;
-    theta=40/180*pi;
-    alpha=5/180*pi;
+    theta=10/180*pi;
+    alpha=1/2*pi;
     l1.Position = [sin(theta)*sin(alpha) sin(theta)*cos(alpha) cos(theta)];
     l1.Style ='infinite';
     l1.Color = [249/256 247/256 248/256];
     s.FaceColor = [0 105/256 148/256];
     s.FaceLighting = 'gouraud';
     s.AmbientStrength = 1;
-    s.DiffuseStrength = 0.8;
+    s.DiffuseStrength = 1;
     s.BackFaceLighting = 'lit';
     s.SpecularStrength = 1;
     s.SpecularColorReflectance = 1;
     s.SpecularExponent = 7;
     t = annotation('textbox','String','$F=6$, $H_-=0.28$ width is $0.18$','Interpreter','latex','EdgeColor','none');
     t.FontSize=20;
-    t.Position=[0.43,0.85,0.4,0.12];
+    t.Position=[0.4,0.85,0.225,0.07];
+    t.Color=[1 1 1];
     axis off
-    formatt='t=%.1f';
-    t=text(0.8,-0.1,sprintf(formatt,(i-1)*dt),'Interpreter','latex');
+    ax2=subplot(2,1,2);
+    plot(shock(:,1),shock(:,2),'.')
+    xlim([X_lower X_upper])
+    ylim([0 0.18])
+    t=xlabel('$x$','Interpreter','latex');
     t.FontSize=20;
+    t=ylabel('$y$','Interpreter','latex');
+    t.FontSize=20;
+    formatt='$t=%.1f$';
+    t=title(sprintf(formatt,(i-1)*dt),'Interpreter','latex');
+    t.FontSize=20;
+    t.Color=[1 1 1];
+    ax2.YTick=[0 0.09 0.18];
+    ax2.XColor=[1 1 1];
+    ax2.YColor=[1 1 1];
+    ax2.ZColor=[1 1 1];
+    ax2.FontSize=20;
+    ax2.TickLabelInterpreter='latex';
     mov(i)=getframe(f);
     clf(f)
 end
