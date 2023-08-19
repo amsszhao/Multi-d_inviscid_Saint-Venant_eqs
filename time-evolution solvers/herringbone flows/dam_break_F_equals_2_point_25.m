@@ -1,6 +1,6 @@
 clc
 clear
-filepath=strcat(pwd,'/dam_break_F_equals_2_point_25');
+filepath=strcat(pwd,'\dam_break_F_equals_2_point_25');
 N=4000;
 mov(1:N)= struct('cdata',[],'colormap',[]);
 filenamev='dambreak_F_equals_2_point_25';
