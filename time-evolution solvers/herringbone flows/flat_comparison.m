@@ -1,8 +1,8 @@
 clc
 clear
-filepath1=strcat(pwd,'/flat_F_equals_2_point_13');
-filepath2=strcat(pwd,'/flat_F_equals_2_point_14');
-filepath3=strcat(pwd,'/flat_F_equals_2_point_15');
+filepath1=strcat(pwd,'\flat_F_equals_2_point_13');
+filepath2=strcat(pwd,'\flat_F_equals_2_point_14');
+filepath3=strcat(pwd,'\flat_F_equals_2_point_15');
 
 N=5000;
 mov(1:N)= struct('cdata',[],'colormap',[]);
