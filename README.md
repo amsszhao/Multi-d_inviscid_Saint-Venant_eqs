@@ -18,7 +18,7 @@ For questions/comments please contact either the first author via yangzhao@amss.
 
 * Clawpack
   
-  Clawpack Development Team (YEAR), Clawpack Version 5.9.0, http://www.clawpack.org, doi: 10.5281/zenodo.7026045
+  Clawpack Development Team (2022), Clawpack Version 5.9.0, http://www.clawpack.org, doi: 10.5281/zenodo.7026045
   
 ## Description 
 
