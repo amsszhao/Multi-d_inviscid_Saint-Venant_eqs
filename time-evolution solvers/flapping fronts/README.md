@@ -24,7 +24,7 @@ With wall boundary condition, the width of the channel is set to be 0.18. Wave f
 
 #### roll_width_point18_refined.py -> roll_width_point18_refined.m
 
-With wall boundary condition, the width of the channel is set to be 0.18. Wave fronts start to flap after a while. The flapping is persistent and do not become chaotic. Finer meshgrid is used compared with roll_width_point18.py. Raw data is used to generated figure in the paper.
+With wall boundary condition, the width of the channel is set to be 0.18. Wave fronts start to flap after a while. The flapping is persistent and do not become chaotic. Finer meshgrid is used compared with roll_width_point18.py. Raw data files are used to generate figures in the paper.
 
 #### roll_width_point18_periodic.py -> roll_width_point18_periodic.m
 
