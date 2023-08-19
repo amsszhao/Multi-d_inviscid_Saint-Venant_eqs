@@ -1,6 +1,6 @@
 clc
 clear
-filepath=strcat(pwd,'/flat_F_equals_2_point_25');
+filepath=strcat(pwd,'\flat_F_equals_2_point_25');
 N=1500;
 mov(1:N)= struct('cdata',[],'colormap',[]);
 filenamev='flat_F_equals_2_point_25';
