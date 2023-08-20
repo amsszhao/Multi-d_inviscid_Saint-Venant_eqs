@@ -20,11 +20,11 @@ With wall boundary condition, the width of the channel is set to be 0.17. No fla
 
 #### roll_width_point18.py -> roll_width_point18.m
 
-With wall boundary condition, the width of the channel is set to be 0.18. Wave fronts start to flap after a while. The flapping is persistent and do not become chaotic.
+With wall boundary condition, the width of the channel is set to be 0.18. Wave fronts start to flap after a while. The flapping waves are persistent and do not become chaotic.
 
 #### roll_width_point18_refined.py -> roll_width_point18_refined.m
 
-With wall boundary condition, the width of the channel is set to be 0.18. Wave fronts start to flap after a while. The flapping is persistent and do not become chaotic. Finer meshgrid is used compared with roll_width_point18.py. Raw data files are used to generate figures in the paper.
+With wall boundary condition, the width of the channel is set to be 0.18. Wave fronts start to flap after a while. The flapping waves are persistent and do not become chaotic. Finer meshgrid is used compared with roll_width_point18.py. Raw data files are used to generate figures in the paper.
 
 #### roll_width_point18_periodic.py -> roll_width_point18_periodic.m
 
@@ -32,15 +32,15 @@ With periodic y-boundary condition, the width of the channel is set to be 0.18. 
 
 #### roll_width_point36_periodic.py -> roll_width_point36_periodic.m
 
-With periodic y-boundary condition, the width of the channel is set to be 0.36. Wave fronts start to flap after a while. The flapping is persistent and do not become chaotic.
+With periodic y-boundary condition, the width of the channel is set to be 0.36. Wave fronts start to flap after a while. The flapping waves are persistent and do not become chaotic.
 
 #### roll_width_point2.py -> roll_width_point2.m
 
-With wall boundary condition, the width of the channel is set to be 0.2. Wave fronts start to flap after a while. The flapping waves is also unstable, transitioning to chaotic flow at the end.
+With wall boundary condition, the width of the channel is set to be 0.2. Wave fronts start to flap after a while. The flapping waves are also unstable, transitioning to chaotic flow at the end.
 
 #### roll_width_1.py -> roll_width_1.m
 
-With wall boundary condition, the width of the channel is set to be 1. Wave fronts start to flap after a while. The flapping waves is also unstable, transitioning to chaotic flow at the end.
+With wall boundary condition, the width of the channel is set to be 1. Wave fronts start to flap after a while. The flapping waves are also unstable, transitioning to chaotic flow at the end.
 
 
 
