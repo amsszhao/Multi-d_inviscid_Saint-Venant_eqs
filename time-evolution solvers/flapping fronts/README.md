@@ -6,17 +6,17 @@ Movies are downloadable from https://zenodo.org/record/8265171.
 
 #### roll_width_point15.py -> roll_width_point15.m
 
-With wall boundary condition, the width of the channel is set to be 0.15. No flapping front is shown at the end. Channel roll waves are stable.
+With wall boundary condition, the width of the channel is set to be 0.15. No flapping front is seen at the end. Channel roll waves are stable.
 
 
 #### roll_width_point16.py -> roll_width_point16.m
 
-With wall boundary condition, the width of the channel is set to be 0.16. No flapping front is shown at the end. Channel roll waves are stable.
+With wall boundary condition, the width of the channel is set to be 0.16. No flapping front is seen at the end. Channel roll waves are stable.
 
 
 #### roll_width_point17.py -> roll_width_point17.m
 
-With wall boundary condition, the width of the channel is set to be 0.17. No flapping front is shown at the end. Channel roll waves are stable.
+With wall boundary condition, the width of the channel is set to be 0.17. No flapping front is seen at the end. Channel roll waves are stable.
 
 #### roll_width_point18.py -> roll_width_point18.m
 
@@ -28,7 +28,7 @@ With wall boundary condition, the width of the channel is set to be 0.18. Wave f
 
 #### roll_width_point18_periodic.py -> roll_width_point18_periodic.m
 
-With periodic y-boundary condition, the width of the channel is set to be 0.18. No flapping front is shown at the end. Channel roll waves are stable.
+With periodic y-boundary condition, the width of the channel is set to be 0.18. No flapping front is seen at the end. Channel roll waves are stable.
 
 #### roll_width_point36_periodic.py -> roll_width_point36_periodic.m
 
