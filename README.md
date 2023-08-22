@@ -34,7 +34,7 @@ Movies are downloadable from https://zenodo.org/record/8265171.
 
 ### data
 
-Inside the folder data, one can find boundaries.mat which contains raw datum of various stability boundaries of the 2d inviscid roll waves.
+Inside the folder data, one can find boundaries.mat which contains raw data of various stability boundaries of the 2d inviscid roll waves.
 
 
 
