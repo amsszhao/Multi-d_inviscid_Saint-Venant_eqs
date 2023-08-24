@@ -18,14 +18,14 @@ import numpy as np
 from clawpack import riemann
 from clawpack.riemann.shallow_roe_with_efix_2D_constants import depth, x_momentum, y_momentum, num_eqn
 
-def qinit(state,HL=1.,HR=0.7,dam_break_location=16):
+def qinit(state,HL=1.,HR=0.7,dam_break_location=12):
     UL=HL**(1/2)
     UR=HR**(1/2)
     X, Y = state.p_centers
     perturbation=np.zeros(X.shape)
     for i in range(2000):
         for j in range(500):
-            r2 =(X[i,j]-4.0)**2 + (Y[i,j]-2.5)**2
+            r2 =(X[i,j]-8.0)**2 + (Y[i,j]-2.5)**2
             if r2<=0.5:
                 perturbation[i,j]=np.exp(-0.2/(0.5-r2))
     state.q[depth     ,:,:] = HL*(X<=dam_break_location) + HR*(X>dam_break_location)+perturbation
@@ -103,11 +103,11 @@ def setup(F=2.25,kernel_language='Python', use_petsc=False, outdir='dam_break_F_
     qinit(state)
 
     claw = pyclaw.Controller()
-    claw.tfinal = 400
+    claw.tfinal = 1000
     claw.solution = pyclaw.Solution(state,domain)
     claw.solver = solver
     claw.outdir = outdir
-    claw.num_output_times = 4000
+    claw.num_output_times = 5000
     claw.keep_copy = False
 
     return claw
