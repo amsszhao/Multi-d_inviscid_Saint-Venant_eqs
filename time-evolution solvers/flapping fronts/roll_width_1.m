@@ -1,9 +1,7 @@
 clc
 clear
-
 filepath=strcat(pwd,'/roll_width_1');
 filenamev='roll_width_1';
-
 N=800;
 hn=0.28;
 f=6;
@@ -11,19 +9,14 @@ num_mesh=800;
 num_period=10;
 period=integral(@(h)(h.^2+h+1.0)./(f^2*h.^2-(1.0+2.0*f)*h+1.0),hn,-hn/2.0+(hn^2/4.0+2.0/hn)^0.5);
 dx=period/800;
-
 X_lower=0;
 X_upper=period*num_period-dx;
-
 dx=period/num_mesh;
-
 Y_lower=0.005;
 Y_upper=0.995;
-
 dy=0.01;
 [X,Y] = meshgrid(X_lower:dx:X_upper,Y_lower:dy:Y_upper);
 [m,n]=size(X);
-
 dt=0.2;
 v=VideoWriter(filenamev,'MPEG-4');
 open(v)
@@ -76,8 +69,7 @@ for i=1:N
         end
     end
     ax=subplot(2,1,1);
-    s=surf(X,Y,H);
-    
+    s=surf(X,Y,H); 
     s.EdgeColor='none';
     view(3)
     ax.XLim = [X_lower X_upper];
@@ -98,7 +90,6 @@ for i=1:N
     s.AmbientStrength = 1;
     s.DiffuseStrength = 0.8;
     s.BackFaceLighting = 'lit';
-    
     s.SpecularStrength = 1;
     s.SpecularColorReflectance = 1;
     s.SpecularExponent = 7;
