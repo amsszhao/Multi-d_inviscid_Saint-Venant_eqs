@@ -5,7 +5,7 @@ filepath2=strcat(pwd,'\flat_F_equals_2_point_14');
 filepath3=strcat(pwd,'\flat_F_equals_2_point_15');
 
 N=5000;
-mov(1:N)= struct('cdata',[],'colormap',[]);
+%mov(1:N)= struct('cdata',[],'colormap',[]);
 filenamev='flat_comparison';
 X_lower=0.005;
 X_upper=49.995;
@@ -18,6 +18,10 @@ dy=0.01;
 [m,n]=size(X);
 
 dt=0.2;
+v=VideoWriter(filenamev,'MPEG-4');
+v.FrameRate = 20;
+open(v)
+
 for i=1:N
     if i==1
        f=figure;
@@ -153,10 +157,8 @@ for i=1:N
     t.FitBoxToText='on';
     t.Position=[0.4,0,0.4,0.12];
     axis off
-    mov(i)=getframe(f);
+    mov=getframe(f);
+    writeVideo(v,mov)
     clf(f)
 end
-v=VideoWriter(filenamev,'MPEG-4');
-open(v)
-writeVideo(v,mov)
 close(v)
