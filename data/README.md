@@ -8,8 +8,8 @@ Loading boundary.mat into Matlab, one can find raw data for
 #### boundary_1d_low_II
 1d low-frequency stability boundary II;
 
-see Fig. 7. b. of Mathew A. Johnson, Pascal Noble, L. Miguel Rodrigues, Zhao Yang, and Kevin Zumbrun. Spectral
-stability of inviscid roll waves. Comm. Math. Phys., 367(1):265–316, 2019.
+see Fig. 7. b. of _Mathew A. Johnson, Pascal Noble, L. Miguel Rodrigues, Zhao Yang, and Kevin Zumbrun. Spectral
+stability of inviscid roll waves. Comm. Math. Phys., 367(1):265–316, 2019._
 
 #### boundary_1d_mid
 1d medium-frequency stability boundary, &#34 1d mid &#34, see FIGURE 3, FIGURE 5;
