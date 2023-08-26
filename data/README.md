@@ -21,7 +21,7 @@ stability of inviscid roll waves. Comm. Math. Phys., 367(1):265–316, 2019.
 2d medium-frequency stability boundary, ``2d mid'', see FIGURE 5;
 
 #### boundary_Lstar_1
-stability boundary(ies) for channel roll waves with L_*=1, see FIGURE 5;
+stability boundary(ies) for channel roll waves with $L_*=1$, see FIGURE 5;
 
 #### boundary_Lstar_1third
 stability boundary(ies) for channel roll waves with L_*=1/3, see FIGURE 5;
