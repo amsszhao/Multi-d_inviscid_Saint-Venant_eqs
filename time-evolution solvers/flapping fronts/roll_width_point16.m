@@ -12,14 +12,11 @@ dx=period/800;
 X_lower=0;
 X_upper=period*num_period-dx;
 dx=period/num_mesh;
-
 Y_lower=0.0;
 Y_upper=0.16;
-
 dy=(Y_upper/99);
 [X,Y] = meshgrid(X_lower:dx:X_upper,Y_lower:dy:Y_upper);
 [m,n]=size(X);
-
 dt=0.2;
 v=VideoWriter(filenamev,'MPEG-4');
 open(v)
@@ -73,7 +70,6 @@ for i=1:N
     end
     ax=subplot(2,1,1);
     s=surf(X,Y,H);
-    
     s.EdgeColor='none';
     view(3)
     ax.XLim = [X_lower X_upper];
@@ -82,8 +78,7 @@ for i=1:N
     ax.CameraTarget = [(X_lower+X_upper)/2 0.08 1.5];
     ax.CameraUpVector = [0 0 1];
     ax.CameraViewAngle = 35;
-    ax.DataAspectRatio = [0.4 0.4 1];
-    
+    ax.DataAspectRatio = [0.4 0.4 1];    
     l1 = light;
     theta=40/180*pi;
     alpha=5/180*pi;
@@ -94,8 +89,7 @@ for i=1:N
     s.FaceLighting = 'gouraud';
     s.AmbientStrength = 1;
     s.DiffuseStrength = 0.8;
-    s.BackFaceLighting = 'lit';
-    
+    s.BackFaceLighting = 'lit'; 
     s.SpecularStrength = 1;
     s.SpecularColorReflectance = 1;
     s.SpecularExponent = 7;
