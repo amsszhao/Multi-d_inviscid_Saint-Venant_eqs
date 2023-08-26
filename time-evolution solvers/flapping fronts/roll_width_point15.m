@@ -69,9 +69,7 @@ for i=1:N
         end
     end
     ax=subplot(2,1,1);
-  
     s=surf(X,Y,H);
-    
     s.EdgeColor='none';
     view(3)
      ax.XLim = [X_lower X_upper];
@@ -92,7 +90,6 @@ for i=1:N
     s.AmbientStrength = 1;
     s.DiffuseStrength = 0.8;
     s.BackFaceLighting = 'lit';
-    
     s.SpecularStrength = 1;
     s.SpecularColorReflectance = 1;
     s.SpecularExponent = 7;
