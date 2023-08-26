@@ -2,7 +2,6 @@ clc
 clear
 filepath=strcat(pwd,'\dam_break_F_equals_2_point_25');
 N=5000;
-mov(1:N)= struct('cdata',[],'colormap',[]);
 filenamev='dambreak_F_equals_2_point_25';
 X_lower=0.005;
 X_upper=19.995;
@@ -13,6 +12,8 @@ dy=0.01;
 [X,Y] = meshgrid(X_lower:dx:X_upper,Y_lower:dy:Y_upper);
 [m,n]=size(X);
 dt=0.2;
+v=VideoWriter(filenamev,'MPEG-4');
+open(v)
 for i=1:N
     if i==1
         f=figure;
@@ -73,10 +74,8 @@ for i=1:N
     t.Color='white';
     t.Position=[0.5,0.8,0.4,0.12];
     axis off
-    mov(i)=getframe(f);
+    mov=getframe(f);
+    writeVideo(v,mov);
     clf(f)
 end
-v=VideoWriter(filenamev,'MPEG-4');
-open(v)
-writeVideo(v,mov)
 close(v)
