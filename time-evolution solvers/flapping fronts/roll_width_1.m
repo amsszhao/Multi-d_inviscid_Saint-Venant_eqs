@@ -5,8 +5,6 @@ filepath=strcat(pwd,'/roll_width_1');
 filenamev='roll_width_1';
 
 N=800;
-mov(1:N)= struct('cdata',[],'colormap',[]);
-
 hn=0.28;
 f=6;
 num_mesh=800;
@@ -27,6 +25,8 @@ dy=0.01;
 [m,n]=size(X);
 
 dt=0.2;
+v=VideoWriter(filenamev,'MPEG-4');
+open(v)
 for i=1:N
     if i==1
        f=figure;
@@ -125,10 +125,8 @@ for i=1:N
     ax2.ZColor=[1 1 1];
     ax2.FontSize=20;
     ax2.TickLabelInterpreter='latex';
-    mov(i)=getframe(f);
+    mov=getframe(f);
+    writeVideo(v,mov);
     clf(f)
 end
-v=VideoWriter(filenamev,'MPEG-4');
-open(v)
-writeVideo(v,mov)
 close(v)
