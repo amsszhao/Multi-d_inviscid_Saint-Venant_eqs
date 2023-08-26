@@ -2,29 +2,24 @@ clc
 clear
 filepath=strcat(pwd,'\roll_width_point2');
 N=2000;
-mov(1:N)= struct('cdata',[],'colormap',[]);
 filenamev='roll_width_point2';
-
 hn=0.28;
 f=6;
 num_mesh=800;
 num_period=10;
 period=integral(@(h)(h.^2+h+1.0)./(f^2*h.^2-(1.0+2.0*f)*h+1.0),hn,-hn/2.0+(hn^2/4.0+2.0/hn)^0.5);
 dx=period/800;
-
 X_lower=0;
 X_upper=period*num_period-dx;
-
 dx=period/num_mesh;
-
 Y_lower=0.0005;
 Y_upper=0.1995;
-
 dy=0.002;
 [X,Y] = meshgrid(X_lower:dx:X_upper,Y_lower:dy:Y_upper);
 [m,n]=size(X);
-
 dt=0.2;
+v=VideoWriter(filenamev,'MPEG-4');
+open(v)
 for i=1:N
     if i==1
        f=figure;
@@ -73,10 +68,8 @@ for i=1:N
             end
         end
     end
-    
     ax=subplot(2,1,1);
     s=surf(X,Y,H);
-    
     s.EdgeColor='none';
     view(3)
     ax.XLim = [X_lower X_upper];
@@ -97,7 +90,6 @@ for i=1:N
     s.AmbientStrength = 1;
     s.DiffuseStrength = 0.8;
     s.BackFaceLighting = 'lit';
-    
     s.SpecularStrength = 1;
     s.SpecularColorReflectance = 1;
     s.SpecularExponent = 7;
@@ -124,10 +116,8 @@ for i=1:N
     ax2.ZColor=[1 1 1];
     ax2.FontSize=20;
     ax2.TickLabelInterpreter='latex';
-    mov(i)=getframe(f);
+    mov=getframe(f);
+    writeVideo(v,mov)
     clf(f)
 end
-v=VideoWriter(filenamev,'MPEG-4');
-open(v)
-writeVideo(v,mov)
 close(v)
