@@ -30,16 +30,16 @@ stability boundary(ies) for channel roll waves with L<sub>*</sub>=1/3, see FIGUR
 stability boundary(ies) for channel roll waves with L<sub>*</sub>=0.1, see FIGURE 5;
 
 #### boundary_ind2
-The gray curve in FIGURE 10 top middle panel where ind<sub>2</sub> vanishes;
+the gray curve in FIGURE 10 top middle panel where ind<sub>2</sub> vanishes;
 
-#### boundary_ind3_gray
-The gray curve in FIGURE 10 top right panel where ind<sub>3</sub> vanishes;
+#### boundary_ind3
+the gray curve in FIGURE 10 top right panel where ind<sub>3</sub> vanishes;
 
 #### boundary_ind4
-The gray curve in FIGURE 10 bottem middle panel where ind<sub>4</sub> vanishes;
+the gray curve in FIGURE 10 bottem middle panel where ind<sub>4</sub> vanishes;
 
 #### boundary_ind5
-The gray curve in FIGURE 10 bottem right panel where ind<sub>5</sub> vanishes.
+the gray curve in FIGURE 10 bottem right panel where ind<sub>5</sub> vanishes.
 
 
 
