@@ -2,7 +2,6 @@ clc
 clear
 filepath=strcat(pwd,'\roll_width_point18_refined');
 N=4000;
-mov(1:N)= struct('cdata',[],'colormap',[]);
 filenamev='roll_width_point18_refined';
 hn=0.28;
 f=6;
@@ -10,18 +9,17 @@ num_mesh=8000;
 num_period=3;
 period=integral(@(h)(h.^2+h+1.0)./(f^2*h.^2-(1.0+2.0*f)*h+1.0),hn,-hn/2.0+(hn^2/4.0+2.0/hn)^0.5);
 dx=period/8000;
-
 X_lower=0;
 X_upper=period*num_period-dx;
 dx=period/num_mesh;
 Y_lower=0.0;
 Y_upper=0.18;
-
 dy=(Y_upper/99);
 [X,Y] = meshgrid(X_lower:dx:X_upper,Y_lower:dy:Y_upper);
 [m,n]=size(X);
-
 dt=0.1;
+v=VideoWriter(filenamev,'MPEG-4');
+open(v)
 for i=1:N
     if i==1
         f=figure;
@@ -119,10 +117,8 @@ for i=1:N
     ax2.ZColor=[1 1 1];
     ax2.FontSize=20;
     ax2.TickLabelInterpreter='latex';
-    mov(i)=getframe(f);
+    mov=getframe(f);
+    writeVideo(v,mov);
     clf(f)
 end
-v=VideoWriter(filenamev,'MPEG-4');
-open(v)
-writeVideo(v,mov)
 close(v)
