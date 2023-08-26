@@ -6,7 +6,6 @@ filepath2=strcat(pwd,'\dam_break_F_equals_2_point_14');
 filepath3=strcat(pwd,'\dam_break_F_equals_2_point_15');
 
 N=7000;
-mov(1:N)= struct('cdata',[],'colormap',[]);
 filenamev='dam_break_comparision';
 X_lower=0.005;
 X_upper=19.995;
@@ -19,7 +18,8 @@ dy=0.01;
 [m,n]=size(X);
 
 dt=0.1;
-
+v=VideoWriter(filenamev,'MPEG-4');
+open(v)
 for i=1:N
     if i==1
        f=figure;
@@ -155,10 +155,8 @@ for i=1:N
     t.FitBoxToText='on';
     t.Position=[0.31,0,0.4,0.12];
     axis off
-    mov(i)=getframe(f);
+    mov=getframe(f);
+    writeVideo(v,mov);
     clf(f)
 end
-v=VideoWriter(filenamev,'MPEG-4');
-open(v)
-writeVideo(v,mov)
 close(v)
