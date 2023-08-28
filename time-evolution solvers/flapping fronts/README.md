@@ -34,6 +34,10 @@ With periodic y-boundary condition, the width of the channel is set to be 0.18. 
 
 With periodic y-boundary condition, the width of the channel is set to be 0.36. Wave fronts start to flap after a while. The flapping waves are persistent and do not become chaotic.
 
+#### roll_width_point19.py -> roll_width_point19.m
+
+With wall boundary condition, the width of the channel is set to be 0.19. Wave fronts start to flap after a while. The flapping waves are persistent and do not become chaotic.
+
 #### roll_width_point2.py -> roll_width_point2.m
 
 With wall boundary condition, the width of the channel is set to be 0.2. Wave fronts start to flap after a while. The flapping waves are also unstable, transitioning to chaotic flow at the end.
