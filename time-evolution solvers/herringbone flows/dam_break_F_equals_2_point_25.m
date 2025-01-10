@@ -1,7 +1,7 @@
 clc
 clear
 filepath=strcat(pwd,'\dam_break_F_equals_2_point_25');
-N=5000;
+N=5001;
 filenamev='dambreak_F_equals_2_point_25';
 X_lower=0.005;
 X_upper=19.995;
@@ -13,6 +13,8 @@ dy=0.01;
 [m,n]=size(X);
 dt=0.2;
 v=VideoWriter(filenamev,'MPEG-4');
+v.FrameRate=15;
+v.Quality=100;
 open(v)
 for i=1:N
     if i==1
@@ -37,7 +39,6 @@ for i=1:N
     H=C{1};
     H=reshape(H,[n,m]);
     H=transpose(H);
-
     ax=axes;
     s=surf(X,Y,H);
     s.EdgeColor='none';
