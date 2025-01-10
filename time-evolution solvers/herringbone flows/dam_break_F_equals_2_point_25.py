@@ -19,8 +19,9 @@ from clawpack import riemann
 from clawpack.riemann.shallow_roe_with_efix_2D_constants import depth, x_momentum, y_momentum, num_eqn
 
 def qinit(state,HL=1.,HR=0.7,dam_break_location=12):
-    UL=HL**(1/2)
-    UR=HR**(1/2)
+    c=(HR**(3/2) - HL)/(HR - HL)
+    UL=HL**(1/2)-c
+    UR=HR**(1/2)-c
     X, Y = state.p_centers
     perturbation=np.zeros(X.shape)
     for i in range(2000):
