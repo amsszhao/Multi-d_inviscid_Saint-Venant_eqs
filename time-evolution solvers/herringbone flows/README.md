@@ -1,6 +1,6 @@
 ## Description
 
-One should first run python files to generate raw date files and then run matlab files to generate movies.
+One should first run python files to generate raw date files and then run matlab files to make movies.
 
 Movies are downloadable from https://zenodo.org/record/8288643.
 
