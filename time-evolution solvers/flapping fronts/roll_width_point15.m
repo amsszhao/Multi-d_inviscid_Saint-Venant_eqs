@@ -1,7 +1,7 @@
 clc
 clear
 filepath=strcat(pwd,'\roll_width_point15');
-N=5000;
+N=5001;
 filenamev='roll_width_point15';
 hn=0.28;
 f=6;
@@ -19,6 +19,8 @@ dy=(Y_upper/99);
 [m,n]=size(X);
 dt=0.2;
 v=VideoWriter(filenamev,'MPEG-4');
+v.FrameRate=15;
+v.Quality=100;
 open(v)
 for i=1:N
     if i==1
@@ -72,8 +74,8 @@ for i=1:N
     s=surf(X,Y,H);
     s.EdgeColor='none';
     view(3)
-     ax.XLim = [X_lower X_upper];
-     ax.YLim = [0 1];
+    ax.XLim = [X_lower X_upper];
+    ax.YLim = [0 1];
     ax.CameraPosition =[(X_lower+X_upper)/2 -0.1 5];
     ax.CameraTarget = [(X_lower+X_upper)/2 0.07 1.5];
     ax.CameraUpVector = [0 0 1];

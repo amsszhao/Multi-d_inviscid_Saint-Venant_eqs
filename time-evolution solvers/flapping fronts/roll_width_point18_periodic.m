@@ -1,7 +1,7 @@
 clc
 clear
 filepath=strcat(pwd,'\roll_width_point18_periodic');
-N=5000;
+N=5001;
 filenamev='roll_width_point18_periodic';
 hn=0.28;
 f=6;
@@ -19,6 +19,8 @@ dy=0.18/99;
 [m,n]=size(X);
 dt=0.2;
 v=VideoWriter(filenamev,'MPEG-4');
+v.FrameRate=15;
+v.Quality=100;
 open(v);
 for i=1:N
     if i==1
@@ -117,7 +119,7 @@ for i=1:N
     ax2.FontSize=20;
     ax2.TickLabelInterpreter='latex';
     mov=getframe(f);
-    writeVideo(v,mov)
+    writeVideo(v,mov);
     clf(f)
 end
 close(v)

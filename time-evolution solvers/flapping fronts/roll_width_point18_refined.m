@@ -19,6 +19,8 @@ dy=(Y_upper/99);
 [m,n]=size(X);
 dt=0.1;
 v=VideoWriter(filenamev,'MPEG-4');
+v.FrameRate=15;
+v.Quality=100;
 open(v)
 for i=1:N
     if i==1

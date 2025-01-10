@@ -1,7 +1,7 @@
 clc
 clear
 filepath=strcat(pwd,'/roll_width_point19');
-N=5000;
+N=5001;
 filenamev='roll_width_point19';
 
 hn=0.28;
@@ -25,7 +25,9 @@ dy=(Y_upper/99);
 
 dt=0.2;
 v=VideoWriter(filenamev,'MPEG-4');
-    open(v)
+v.FrameRate=15;
+v.Quality=100;
+open(v)
 for i=1:N
     if i==1
        f=figure;
@@ -125,7 +127,7 @@ for i=1:N
     ax2.FontSize=20;
     ax2.TickLabelInterpreter='latex';
     mov=getframe(f);
-    writeVideo(v,mov)
+    writeVideo(v,mov);
     clf(f)
 end
 

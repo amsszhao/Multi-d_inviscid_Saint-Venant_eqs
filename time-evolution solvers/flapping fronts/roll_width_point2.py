@@ -32,7 +32,7 @@ def qinit(state,f,xin,period,num_mesh,num_period):
     sol2=sol2[1:]
     sol=np.append(sol1[::-1],sol2)
     harray=np.tile(sol,num_period)
-    huarray=-1.0/f+(1.0+1.0/f)*harray
+    huarray=-1.0/f
     
     X, Y = state.p_centers
     perturbation=np.zeros(X.shape)
@@ -126,11 +126,11 @@ def setup(f=6.0,hn=0.28,num_mesh=800,num_period=10,kernel_language='Python', use
     qinit(state,f,xin,period,num_mesh,num_period)
 
     claw = pyclaw.Controller()
-    claw.tfinal = 400
+    claw.tfinal = 1000
     claw.solution = pyclaw.Solution(state,domain)
     claw.solver = solver
     claw.outdir = outdir
-    claw.num_output_times = 2000
+    claw.num_output_times = 5000
     claw.keep_copy = False
 
     return claw
