@@ -5,7 +5,7 @@ filepath1=strcat(pwd,'\dam_break_F_equals_2_point_13');
 filepath2=strcat(pwd,'\dam_break_F_equals_2_point_14');
 filepath3=strcat(pwd,'\dam_break_F_equals_2_point_15');
 
-N=7000;
+N=7001;
 filenamev='dam_break_comparision';
 X_lower=0.005;
 X_upper=19.995;
@@ -19,6 +19,8 @@ dy=0.01;
 
 dt=0.1;
 v=VideoWriter(filenamev,'MPEG-4');
+v.FrameRate=15;
+v.Quality=100;
 open(v)
 for i=1:N
     if i==1

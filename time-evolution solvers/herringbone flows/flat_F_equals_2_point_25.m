@@ -1,7 +1,7 @@
 clc
 clear
 filepath=strcat(pwd,'\flat_F_equals_2_point_25');
-N=1500;
+N=1501;
 filenamev='flat_F_equals_2_point_25';
 X_lower=0.005;
 X_upper=49.995;
@@ -13,6 +13,8 @@ dy=0.01;
 [m,n]=size(X);
 dt=0.2;
 v=VideoWriter(filenamev,'MPEG-4');
+v.FrameRate=15;
+v.Quality=100;
 open(v)
 for i=1:N
     if i-1<=9

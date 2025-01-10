@@ -4,8 +4,7 @@ filepath1=strcat(pwd,'\flat_F_equals_2_point_13');
 filepath2=strcat(pwd,'\flat_F_equals_2_point_14');
 filepath3=strcat(pwd,'\flat_F_equals_2_point_15');
 
-N=5000;
-%mov(1:N)= struct('cdata',[],'colormap',[]);
+N=5001;
 filenamev='flat_comparison';
 X_lower=0.005;
 X_upper=49.995;
@@ -19,7 +18,8 @@ dy=0.01;
 
 dt=0.2;
 v=VideoWriter(filenamev,'MPEG-4');
-v.FrameRate = 20;
+v.FrameRate=15;
+v.Quality=100;
 open(v)
 
 for i=1:N
@@ -151,7 +151,7 @@ for i=1:N
     s.SpecularStrength = 1;
     s.SpecularColorReflectance = 1;
     s.SpecularExponent = 7;
-     t = annotation('textbox','String','$F=2.15$, $H_R=0.7$, channel width is $5$ and length is $50$','Interpreter','latex','EdgeColor','none');
+    t = annotation('textbox','String','$F=2.15$, $H_R=0.7$, channel width is $5$ and length is $50$','Interpreter','latex','EdgeColor','none');
     t.FontSize=20;
     t.Color='white';
     t.FitBoxToText='on';
