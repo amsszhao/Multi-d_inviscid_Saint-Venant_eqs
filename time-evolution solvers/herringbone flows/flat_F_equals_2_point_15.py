@@ -19,8 +19,9 @@ import numpy as np
 from clawpack import riemann
 from clawpack.riemann.shallow_roe_with_efix_2D_constants import depth, x_momentum, y_momentum, num_eqn
 
-def qinit(state,HL=1.,dam_break_location=25):
-    UL=HL**(1/2)
+def qinit(state,HL=1.):
+    c=(0.7**(3/2) - 1.0)/(0.7 - 1.0)
+    UL=HL**(1/2)-c
     X, Y = state.p_centers
     perturbation=np.zeros(X.shape)
     for i in range(5000):
