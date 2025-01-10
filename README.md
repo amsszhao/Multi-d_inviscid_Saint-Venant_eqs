@@ -5,7 +5,7 @@ Matlab codes for Evans function solvers and Python codes for numerical time evol
 
 _Authors:_ Zhao Yang and Kevin Zumbrun 
 
-For questions/comments please contact either the first author via yangzhao@amss.ac.cn or the second author via kzumbrun@indiana.edu
+For questions/comments please contact either the first author via yangzhao@amss.ac.cn or the second author via kzumbrun@iu.edu
 
 ## Prerequisites
 
